@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protótipos</title>
+    <style>
+        body {
+            background-color: rgb(0, 37, 61);
+            font-family: 'Courier New', Courier, monospace;
+            color: aliceblue;
+        }
+
+        /*-----MENU_<NAV>-----*/
+        nav {
+            display: flex;
+            
+            justify-content: space-around;
+            width: 800px;
+        }
+
+        .base {
+            background-color: #a81b1b00;
+            width: 60px;
+            border-left-style: solid;
+            border-left-color: aliceblue;
+            border-width: 2px;
+        }
+
+        .fundo {
+            width: 0px;
+            height: 40px;
+            background-color: #ffffff;
+            transition: width 350ms ease-out;
+            display: flex;
+            align-items: center;
+        }
+
+        .botao {
+            font-family:'Courier New', Courier, monospace;
+            background-color: #56ff0800;
+            padding-left: 10px;
+            color: aliceblue;
+            transition: color 300ms ease-out, margin-left 450ms ease-in;
+            text-align: center;
+        }
+
+        /*========ANIMAÇÃO_MENU(start)========*/
+        .base:hover > .fundo {
+            width: 100px;
+            cursor: pointer;
+        }
+        .base:hover > .fundo > .botao {
+            color: black;
+            margin-left: 5px;
+        }
+        /*========ANIMAÇÃO_<NAV>(end)========*/
+
+        /*---ANIMATED_TITLE----*/
+            #animated_title {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 1s ease-in, transform 0.8s ease;
+            }
+
+            #animated_title.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        /*---ANIMATED_TITLE(END)----*/
+    </style>
+</head>
+<body>
+    <h1>Debug de protótipos de animações de elementos html</h1>
+    <hr>
+    <h2>Protótipo 1: Botão de nav animado</h2>
+    <nav>
+        <div class="base">
+            <div class="fundo">
+                <div class="botao">Botão</div>
+            </div>
+        </div>
+
+        <div class="base">
+            <div class="fundo">
+                <div class="botao">Botão</div>
+            </div>
+        </div>
+
+        <div class="base">
+            <div class="fundo">
+                <div class="botao">Botão</div>
+            </div>
+        </div>
+    </nav>
+    
+    <h2>Debug:</h2>
+
+    <nav>
+        <div class="base" style="background-color: #ff040475;">
+            <div class="fundo" style="background-color: #e524ff60;">
+                <div class="botao" style="background-color: #56ff0854;">Botão</div>
+            </div>
+        </div>
+
+        <div class="base">
+            <div class="fundo">
+                <div class="botao">Botão</div>
+            </div>
+        </div>
+
+        <div class="base">
+            <div class="fundo">
+                <div class="botao">Botão</div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <h2>Protótipo 2: Title com Fade-in usando o evento DOMContentLoaded</h2>
+        <h3 id="animated_title">Hello World !!!</h3>
+
+    <script>
+        //---ATIVADOR_ACTIVE---
+        document.addEventListener("DOMContentLoaded", function() {
+            const title = document.getElementById('animated_title');
+            setTimeout(function() {
+                title.classList.add('active');
+            }, 500);
+        })
+    </script>
+</body>
+</html>
