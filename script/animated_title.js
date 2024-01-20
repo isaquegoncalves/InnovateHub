@@ -7,18 +7,21 @@ document.addEventListener("DOMContentLoaded", function(){
         for (let i = 0; i < titulo.length; i++){
             titulo[i].classList.add('active');
         }
-    }, 500);
+    }, 800);
+
 //======<h2_titulo_desc>=======
     setTimeout(function(){
         const h2titulo = document.getElementById('titulo_desc');
         h2titulo.classList.add('active');
     }, 1000);
-});
 
-//===========Foto_home===========
-document.addEventListener("DOMContentLoaded", function(){
-    const foto = document.getElementById('foto_home');
     setTimeout(function(){
+        const foto = document.getElementById('foto_home');
         foto.classList.add('active');
     }, 500);
+
+    setTimeout(function(){
+        const h2titulo = document.getElementById('menu');
+        h2titulo.classList.add('active');
+    }, 2000);
 });

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabank</title>
+    <style>
+        body {
+            background-color: rgb(22, 22, 22);
+        }
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(3, 212, 107);
+        }
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(185, 252, 218); 
+        }
+
+        .base {
+            background-color: rgb(255, 254, 252);
+            padding: 11px;
+            width: 60px;
+        }
+
+        .fundo {
+            background-color: rgba(165, 42, 42, 0);
+            width: 0px;
+            height: 21px;
+            border-bottom-width: 2px;
+            border-bottom-style: solid;
+            border-bottom-color: blueviolet;
+            transition: width 300ms ease;
+        }
+
+        .botao {
+            background-color: rgba(162, 226, 43, 0.452);
+            width: 0px;
+            color: blueviolet;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        /*<-------Animações------->*/
+        .base:hover {
+            cursor: pointer;
+        }
+
+        .base:hover > .fundo {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>&lt;Botão oficial do Nabank/&gt; </h1>
+    <p>&lt;Para: NaborZin /&gt;</p>
+    <div class="base">
+        <div class="fundo">
+            <div class="botao">
+                Login
+            </div>
+        </div>
+    </div>
+</body>
+</html>

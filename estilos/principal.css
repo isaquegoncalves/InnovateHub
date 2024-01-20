@@ -5,6 +5,11 @@
     src: url('../estilos/fontes/oswald/Oswald-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'alumni-sans';
+    src: url('../estilos/fontes/alumni-sans/AlumniSans-VariableFont_wght.ttf');
+}
+
 :root {
     --texto-primario: #f5f5f5;
 }
@@ -14,7 +19,12 @@
 }
 
 body {
-    background-color: rgb(147, 172, 194);
+    background-color: rgb(41, 41, 41);
+}
+
+main {
+    padding-top: 500px;
+    background-color: #000310;
 }
 
 /*-----MENU_<NAV>-----*/
@@ -25,6 +35,8 @@ nav {
     justify-content: space-around;
     width: 900px;
     position: relative;
+    z-index: 2;
+    transform: opacity 2s ease-in;
 }
 
 .base {
@@ -71,6 +83,7 @@ nav {
 /*========ANIMAÇÃO_TITULO(start)========*/
 .titulo_animado {
     opacity: 0;
+    z-index: 2;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -85,6 +98,7 @@ nav {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
+    z-index: 2;
 }
 
 #titulo_desc.active {
@@ -96,12 +110,20 @@ nav {
 /*========ANIMAÇÃO_IMG(end)========*/
 #foto_home {
     width: 100%;
+    min-width: 800px;
+    height: 800px;
+    background-image: linear-gradient(to bottom, transparent 70%, #000622 90%), url('../imagens/capa-predios.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     filter: brightness(0);
-    position: fixed;
-    transition: filter 1s ease-in;
+    transform: translateY(30px);
+    transition: filter 0.5s ease-in, transform 400ms ease-in;
+    position: absolute;
+    
 }
 #foto_home.active {
     filter: brightness(0.5);
+    transform: translateY(0px);
 }
 
 /*------------------ANIMAÇÕES(end)----------------------*/
@@ -114,6 +136,7 @@ h1 {
     margin-left: 180px;
     margin-top: 100px;
     height: 200px;
+    z-index: 1;
 }
 
 h2 {
@@ -124,4 +147,83 @@ h2 {
     color: var(--texto-primario);
     margin-left: 190px;
     margin-top: 0px;
+}
+
+/*------Conteúdo(<SECTION>)--------*/
+article {
+    background-color: #000310;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 200px auto;
+}
+
+h3 {
+    background-color: #000310;
+    font-family: 'oswald';
+    font-weight: 300;
+    font-size: 4em;
+    text-align: center;
+    color: var(--texto-primario);
+    margin-left: 50px;
+    width: 50%;
+}
+
+p {
+    font-family: 'alumni-sans';
+    font-weight: 100;
+    font-size: 30px;
+    color: var(--texto-primario);
+    background-color: #000310;
+    width: 100%;
+    text-align: justify;
+    text-indent: 50px;
+    margin-top: 15px;
+}
+
+
+/*=====================Fotos==================*/
+#foto_quem-somos {
+    background-image: 
+    linear-gradient(to bottom, transparent 70%, #000310 97%), 
+    linear-gradient(to top, transparent 70%, #000310 97%), 
+    linear-gradient(to left, transparent 70%, #000310 97%), 
+    linear-gradient(to right, transparent 70%, #000310 97%), 
+    url('../imagens/quem-somos.jpg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 370px;
+    margin: auto;
+}
+
+#foto_perspectiva {
+    background-image: 
+    linear-gradient(to bottom, transparent 70%, #000310 97%), 
+    linear-gradient(to top, transparent 70%, #000310 97%), 
+    linear-gradient(to left, transparent 70%, #000310 97%), 
+    linear-gradient(to right, transparent 70%, #000310 97%), 
+    url('../imagens/perspectiva.jpg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 370px;
+    margin: auto;
+}
+
+#foto_recursos {
+    background-image: 
+    linear-gradient(to bottom, transparent 70%, #000310 97%), 
+    linear-gradient(to top, transparent 70%, #000310 97%), 
+    linear-gradient(to left, transparent 70%, #000310 97%), 
+    linear-gradient(to right, transparent 70%, #000310 97%), 
+    url('../imagens/recursos.jpg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 370px;
+    margin: auto;
 }
