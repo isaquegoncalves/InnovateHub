@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //============<Detector de LiveScroll>===========
 window.addEventListener('scroll', function(){
-    //------------Descriçoes<ARTICLE>------------
+    //------------Descriçoes_<ARTICLE>------------
     var tags = document.querySelectorAll('.scroll-detec');
     tags.forEach(function(tag) {
         var rect = tag.getBoundingClientRect();
@@ -43,8 +43,7 @@ window.addEventListener('scroll', function(){
             tag.classList.remove('active');
         }
     }); 
-
-    //------------Fotos_do_<ARTICLE>------------
+    //------------Fotos_<ARTICLE>------------
     var fotos = document.querySelectorAll('.fotos_articles');
     fotos.forEach(function(img) {
         var rect = img.getBoundingClientRect();
