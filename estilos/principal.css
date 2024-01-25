@@ -270,90 +270,119 @@ h2 {
     }
 
     h4 {
-        background-color: rgb(253, 241, 232);
+        background-color: var(--texto-primario);
         font-family: 'oswald';
         font-weight: 400;
-        font-size: 5vw;
+        font-size: 60px;
         text-align: center;
         color: var(--azul-primario);
     }
 
     #depoimentos > h4 > p {
         color: var(--azul-primario);
-        font-size: 2.2vw;
+        font-size: 30px;
         font-family: 'alumni-sans';
     }
 
     /*----------------Box_Depoimento(start)-----------------*/
     .alinha-box {
+        background-color: var(--texto-primario);
         max-width: 1100px;
         display: flex;
         gap: 25px;
         flex-wrap: wrap;
         margin: auto;
+        padding: 30px;
     }
 
     .box-dp-base{
-        background-color: #00d9ff;
+        background-color: var(--azul-primario);
         max-width: 330px;
         min-width: 240px;
-        height: 480px;
         padding: 5px;
         border-radius: 8px;
         margin: auto;
     }
 
     .box-dp-perfil {
-        background-color: #ff0000;
+        background-color: var(--azul-primario);
         height: 140px;
         display: flex;
         align-items: center;
     }
     .idade-perfil {
-        padding-left: 20px;
-        margin-top: 0px;
+        margin: 0px;
+        font-size: 24px;
+        font-weight: bold;
     }
 
     .box-dp-desc {
         background-color: #000310;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     h5 {
         font-family: 'alumni-sans';
-        font-size: 27px;
-        background-color: #ff00dd;
+        font-size: 32px;
+        background-color: var(--azul-primario);
         color: var(--texto-primario);
         padding: 7px;
         margin: auto;
+        font-weight: bold;
     }
     h5.cargo {
         font-style: italic;
+        font-size: 30px;
     }
 
     h5 > p {
         font-family: 'alumni-sans';
         font-weight: 100;
-        font-size: 20px;
-        background-color: #540069;
+        font-size: 24px;
+        background-color: var(--azul-primario);
         text-indent: 28px;
         font-style: normal;
     }
 
-    .pedro {
-        background-image: url('../imagens/Depoimentos/depoimentos_pedro-mendes.jpg');
-        background-size: cover;
-        border-radius: 50%;
-        border-style: solid;
-        border-color: var(--texto-primario);
-        border-width: 5px;
-        width: 100px;
-        height: 100px;
-        margin-left: 20px;
-    }
+        /*=========BOXES IMG-PERFIL(start)=============*/
+            .pedro {
+                background-image: url('../imagens/Depoimentos/depoimentos_pedro-mendes.jpg');
+                background-size: cover;
+                border-radius: 50%;
+                border-style: solid;
+                border-color: var(--texto-primario);
+                border-width: 5px;
+                width: 100px;
+                height: 100px;
+                margin-left: 20px;
+            }
 
+            .maria {
+                background-image: url('../imagens/Depoimentos/depoimentos-maria.jpg');
+                background-size: cover;
+                border-radius: 50%;
+                border-style: solid;
+                border-color: var(--texto-primario);
+                border-width: 5px;
+                width: 100px;
+                height: 100px;
+                margin-left: 20px;
+            }
+
+            .sofia {
+                background-image: url('../imagens/Depoimentos/depoimentos-sofia.jpg');
+                background-size: cover;
+                border-radius: 50%;
+                border-style: solid;
+                border-color: var(--texto-primario);
+                border-width: 5px;
+                width: 100px;
+                height: 100px;
+                margin-left: 20px;
+            }
+        /*=============BOXES IMG-PERFIL(end)=============*/    
     .box-dp-stars {
-        background-color: #4e4e4e;
+        background-color: var(--azul-primario);
         background-image: url('../imagens/Stars.png');
         background-repeat: no-repeat;
         background-size: contain;
