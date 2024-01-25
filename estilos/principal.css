@@ -11,6 +11,7 @@
 }
 
 :root {
+    --azul-primario: #000310;
     --texto-primario: #f5f5f5;
 }
 
@@ -73,63 +74,64 @@ nav {
 }
 /*------------------ANIMAÇÕES----------------------*/
 
-/*========ANIMAÇÃO_MENU(start)========*/
-.base:hover > .fundo {
-    width: 100px;
-    cursor: pointer;
-}
+    /*========ANIMAÇÃO_MENU(start)========*/
+    .base:hover > .fundo {
+        width: 100px;
+        cursor: pointer;
+    }
 
-.base:hover > .fundo > .botao {
-    color: black;
-    margin-left: 5px;
-}
-/*========ANIMAÇÃO_<NAV>(end)========*/
+    .base:hover > .fundo > .botao {
+        color: black;
+        margin-left: 5px;
+    }
+    /*========ANIMAÇÃO_<NAV>(end)========*/
 
-/*========ANIMAÇÃO_TITULO(start)========*/
-.titulo_animado {
-    opacity: 0;
-    z-index: 2;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
+    /*========ANIMAÇÃO_TITULO(start)========*/
+    .titulo_animado {
+        opacity: 0;
+        z-index: 2;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+    }
 
-.titulo_animado.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .titulo_animado.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-/*=======H2_TITULO_DESC=========*/
-#titulo_desc {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-    z-index: 2;
-}
+    /*=======H2_TITULO_DESC=========*/
+    #titulo_desc {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease, transform 1s ease;
+        z-index: 2;
+    }
 
-#titulo_desc.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-/*========ANIMAÇÃO_TITULO(end)========*/
+    #titulo_desc.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /*========ANIMAÇÃO_TITULO(end)========*/
 
-/*========ANIMAÇÃO_IMG(end)========*/
-#foto_home {
-    width: 100%;
-    height: 60vw;
-    background-image: linear-gradient(to bottom, transparent 70%, #000622 90%), url('../imagens/capa-predios.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: brightness(0);
-    transform: translateY(30px);
-    transition: filter 0.5s ease-in, transform 400ms ease-in;
-    position: absolute;
-}
-#foto_home.active {
-    filter: brightness(0.5);
-    transform: translateY(0px);
-}
+    /*========ANIMAÇÃO_IMG(end)========*/
+    #foto_home {
+        width: 100%;
+        height: 60vw;
+        background-image: linear-gradient(to bottom, transparent 70%, #000622 90%), url('../imagens/capa-predios.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: brightness(0);
+        transform: translateY(30px);
+        transition: filter 0.5s ease-in, transform 400ms ease-in;
+        position: absolute;
+    }
+    #foto_home.active {
+        filter: brightness(0.5);
+        transform: translateY(0px);
+    }
 
 /*------------------ANIMAÇÕES(end)----------------------*/
+
 h1 {
     position: relative;
     font-family: 'oswald';
@@ -162,101 +164,204 @@ h2 {
     margin-top: -27px;
 }
 
-/*------Conteúdo(<SECTION>)--------*/
-section {
-    background-color: #000310;
-    z-index: 2;
-    position: relative;
-    padding: 0px 35px;
-    
-}
+/*-------------------Conteúdo<SECTION>_#descricoees(start)----------------------*/
+    section {
+        background-color: #000310;
+        z-index: 2;
+        position: relative;
+        padding: 0px 35px;
+        
+    }
 
-article {
-    background-color: #000310;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 200px auto;
-    z-index: 2;
-    
-}
+    article {
+        background-color: #000310;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 200px auto;
+        z-index: 2;
+        
+    }
 
-h3 {
-    background-color: #000310;
-    font-family: 'oswald';
-    font-weight: 300;
-    font-size: 6vw;
-    text-align: center;
-    color: var(--texto-primario);
-    width: 60%;
-}
+    h3 {
+        background-color: #000310;
+        font-family: 'oswald';
+        font-weight: 300;
+        font-size: 6vw;
+        text-align: center;
+        color: var(--texto-primario);
+        width: 60%;
+    }
 
-h3, .fotos_articles {
-    opacity: 0;
-    transform: translateY(15px);
-    transition: opacity 1s ease-in, transform 0.4s ease-in;
-}
+    h3, .fotos_articles {
+        opacity: 0;
+        transform: translateY(15px);
+        transition: opacity 1s ease-in, transform 0.4s ease-in;
+    }
 
-h3.active, .fotos_articles.active {
-    opacity: 1;
-    transform: translateY(0);
-}
+    h3.active, .fotos_articles.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
-p {
-    font-family: 'alumni-sans';
-    font-weight: 100;
-    font-size: 2.5vw;
-    color: var(--texto-primario);
-    background-color: #000310;
-    text-align: center;
-    
-    margin-top: 15px;
-}
+    h3 > p {
+        font-family: 'alumni-sans';
+        font-weight: 100;
+        font-size: 2.5vw;
+        color: var(--texto-primario);
+        background-color: #000310;
+        text-align: center;
+        
+        margin-top: 15px;
+    }
 
 
-/*=====================Fotos==================*/
-#foto_quem-somos {
-    background-image: 
-    linear-gradient(to bottom, transparent 70%, #000310 97%), 
-    linear-gradient(to top, transparent 70%, #000310 97%), 
-    linear-gradient(to left, transparent 70%, #000310 97%), 
-    linear-gradient(to right, transparent 70%, #000310 97%), 
-    url('../imagens/quem-somos.jpg');
+    /*=====================Fotos==================*/
+    #foto_quem-somos {
+        background-image: 
+        linear-gradient(to bottom, transparent 70%, #000310 97%), 
+        linear-gradient(to top, transparent 70%, #000310 97%), 
+        linear-gradient(to left, transparent 70%, #000310 97%), 
+        linear-gradient(to right, transparent 70%, #000310 97%), 
+        url('../imagens/quem-somos.jpg');
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: antiquewhite;
-    width: 63%;
-    height: 31vw;
-    margin: auto;
-}
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: antiquewhite;
+        width: 63%;
+        height: 31vw;
+        margin: auto;
+    }
 
-#foto_perspectiva {
-    background-image: 
-    linear-gradient(to bottom, transparent 70%, #000310 97%), 
-    linear-gradient(to top, transparent 70%, #000310 97%), 
-    linear-gradient(to left, transparent 70%, #000310 97%), 
-    linear-gradient(to right, transparent 70%, #000310 97%), 
-    url('../imagens/perspectiva.jpg');
+    #foto_perspectiva {
+        background-image: 
+        linear-gradient(to bottom, transparent 70%, #000310 97%), 
+        linear-gradient(to top, transparent 70%, #000310 97%), 
+        linear-gradient(to left, transparent 70%, #000310 97%), 
+        linear-gradient(to right, transparent 70%, #000310 97%), 
+        url('../imagens/perspectiva.jpg');
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 63%;
-    height: 31vw;
-    margin: auto;
-}
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 63%;
+        height: 31vw;
+        margin: auto;
+    }
 
-#foto_recursos {
-    background-image: 
-    linear-gradient(to bottom, transparent 70%, #000310 97%), 
-    linear-gradient(to top, transparent 70%, #000310 97%), 
-    linear-gradient(to left, transparent 70%, #000310 97%), 
-    linear-gradient(to right, transparent 70%, #000310 97%), 
-    url('../imagens/recursos.jpg');
+    #foto_recursos {
+        background-image: 
+        linear-gradient(to bottom, transparent 70%, #000310 97%), 
+        linear-gradient(to top, transparent 70%, #000310 97%), 
+        linear-gradient(to left, transparent 70%, #000310 97%), 
+        linear-gradient(to right, transparent 70%, #000310 97%), 
+        url('../imagens/recursos.jpg');
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 63%;
-    height: 31vw;
-    margin: auto;
-}
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 63%;
+        height: 31vw;
+        margin: auto;
+    }
+/*--------------Conteúdo<SECTION>_#descriçoes(end)----------------*/
+
+/*----------Conteúdo<SECTION>_#depoimentos(start)--------------*/
+    section#depoimentos{
+        background-color: var(--texto-primario);
+    }
+
+    h4 {
+        background-color: rgb(253, 241, 232);
+        font-family: 'oswald';
+        font-weight: 400;
+        font-size: 5vw;
+        text-align: center;
+        color: var(--azul-primario);
+    }
+
+    #depoimentos > h4 > p {
+        color: var(--azul-primario);
+        font-size: 2.2vw;
+        font-family: 'alumni-sans';
+    }
+
+    /*----------------Box_Depoimento(start)-----------------*/
+    .alinha-box {
+        max-width: 1100px;
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .box-dp-base{
+        background-color: #00d9ff;
+        max-width: 330px;
+        min-width: 240px;
+        height: 480px;
+        padding: 5px;
+        border-radius: 8px;
+        margin: auto;
+    }
+
+    .box-dp-perfil {
+        background-color: #ff0000;
+        height: 140px;
+        display: flex;
+        align-items: center;
+    }
+    .idade-perfil {
+        padding-left: 20px;
+        margin-top: 0px;
+    }
+
+    .box-dp-desc {
+        background-color: #000310;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        font-family: 'alumni-sans';
+        font-size: 27px;
+        background-color: #ff00dd;
+        color: var(--texto-primario);
+        padding: 7px;
+        margin: auto;
+    }
+    h5.cargo {
+        font-style: italic;
+    }
+
+    h5 > p {
+        font-family: 'alumni-sans';
+        font-weight: 100;
+        font-size: 20px;
+        background-color: #540069;
+        text-indent: 28px;
+        font-style: normal;
+    }
+
+    .pedro {
+        background-image: url('../imagens/Depoimentos/depoimentos_pedro-mendes.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: var(--texto-primario);
+        border-width: 5px;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+
+    .box-dp-stars {
+        background-color: #4e4e4e;
+        background-image: url('../imagens/Stars.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        max-width: 250px;
+        min-width: 200px;
+        height: 60px;
+        margin: auto;
+    }
+/*----------------Box_Depoimento(end)-----------------*/
+
+/*-------------Conteúdo<SECTION>_#depoimentos(end)----------------*/
