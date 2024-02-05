@@ -121,13 +121,11 @@ main {
             background-size: cover;
             background-repeat: no-repeat;
             filter: brightness(0);
-            transform: translateY(30px);
-            transition: filter 0.5s ease-in, transform 400ms ease-in;
+            transition: filter 0.5s ease-in;
             position: absolute;
         }
         #foto_home.active {
             filter: brightness(0.5);
-            transform: translateY(0px);
         }
 
 /*------------------ANIMAÇÕES(end)----------------------*/
@@ -457,6 +455,62 @@ h2 {
 
 /*-------Responsividade(Mobile)------*/
 @media (max-width: 800px) {
+    
+    #foto_home {
+        width: 100%;
+        height: 1200px;
+        background-image: linear-gradient(to bottom, transparent 70%, #00061f 90%), url('../imagens/capa-predios.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(0);
+        transition: filter 0.5s ease-in;
+        position: absolute;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #foto_logo{
+        display: none;
+        margin: 0px;
+    }
+
+    #base-titulo {
+        background-color: rgba(0, 255, 255, 0);
+        position: relative;
+        padding-top: 250px;
+        z-index: 2;
+        width: 100%;
+    }
+
+    #logo-mobile {
+        background-image: url('../imagens/logo.png');
+        background-repeat: no-repeat;
+        margin: auto;
+        width: 200px;
+        height: 152px;
+        z-index: 2;
+        position: relative;
+    }
+
+    h1 {
+        margin: auto;
+        font-size: 110px;
+        height: 140px;
+        text-align: center;
+    }
+    h2{
+        margin: auto;
+        font-size: 35px;
+        text-align: center;
+    }
+
+    main {
+        padding-top: 800px;
+    }
+
     article.card-desc {
         flex-wrap: wrap;
         flex-direction: column-reverse;
@@ -498,12 +552,12 @@ h2 {
     }
 
     h3 {
-        font-size: 35px;
-        width: 80%;
+        font-size: 55px;
+        width: 85%;
     }
 
     h3 > p {
-        font-size: 17px;
+        font-size: 28px;
     }
 
 
